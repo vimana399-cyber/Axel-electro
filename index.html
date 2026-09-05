@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+
+<title>AXEL ELECTRO</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --yellow: #ffc400;
+    --black: #111111;
+    --dark: #181818;
+    --white: #ffffff;
+    --gray: #666666;
+    --light: #f5f5f5;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.4;
+}
+
+.hero {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 55px 22px 42px;
+}
+
+.lightning {
+    color: var(--yellow);
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.logo {
+    font-size: clamp(44px, 13vw, 72px);
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: .9;
+}
+
+.logo span {
+    display: block;
+    color: var(--yellow);
+    font-size: .62em;
+    letter-spacing: 5px;
+    margin-top: 12px;
+}
+
+.tagline {
+    margin-top: 24px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero-line {
+    width: 80px;
+    height: 4px;
+    background: var(--yellow);
+    margin: 24px auto;
+}
+
+.description {
+    max-width: 500px;
+    margin: auto;
+    color: #dddddd;
+    font-size: 16px;
+}
+
+.section {
+    padding: 38px 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 27px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 4px;
+    background: var(--yellow);
+    margin-top: 8px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.service {
+    border: 2px solid #e4e4e4;
+    padding: 18px 12px;
+    min-height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-icon {
+    color: var(--yellow);
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.service-title {
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.contact-section {
+    background: var(--light);
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+    background: var(--white);
+    border: 2px solid var(--black);
+    margin-bottom: 12px;
+    padding: 16px 18px;
+    font-weight: 900;
+    font-size: 16px;
+    transition: .2s;
+}
+
+.contact-button:hover {
+    background: var(--yellow);
+}
+
+.contact-icon {
+    width: 36px;
+    font-size: 23px;
+}
+
+.contact-arrow {
+    margin-left: auto;
+    font-size: 22px;
+}
+
+.footer {
+    background: var(--yellow);
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.footer-text {
+    margin-top: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.language {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+
+.language button {
+    background: transparent;
+    color: white;
+    border: 1px solid #777;
+    padding: 6px 9px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service {
+        min-height: 100px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="language">
+        <button onclick="toggleLanguage()">RU / EN</button>
+    </div>
+
+    <div class="lightning">⚡</div>
+
+    <div class="logo">
+        AXEL
+        <span>ELECTRO</span>
+    </div>
+
+    <div class="tagline">
+        Electrical Installation · Repair · Automation
+    </div>
+
+    <div class="hero-line"></div>
+
+    <p class="description" id="description">
+        Professional electrical and technical services in Nha Trang.
+    </p>
+
+</header>
+
+
+<section class="section">
+
+    <h2 class="section-title" id="services-title">What I Do</h2>
+
+    <div class="services">
+
+        <div class="service">
+            <div class="service-icon">⚡</div>
+            <div class="service-title">Electrical Installation</div>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">🔧</div>
+            <div class="service-title">Electrical Repair</div>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">▣</div>
+            <div class="service-title">Electrical Panels</div>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">💡</div>
+            <div class="service-title">Lighting & Power</div>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">📹</div>
+            <div class="service-title">CCTV Installation</div>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">⚙</div>
+            <div class="service-title">Automation & Smart Solutions</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section contact-section">
+
+    <h2 class="section-title" id="contact-title">Contact</h2>
+
+    <!-- CONTACT LINKS — WE WILL REPLACE THESE LATER -->
+
+    <a class="contact-button" href="#" id="telegram">
+        <span class="contact-icon">➤</span>
+        <span>Telegram</span>
+        <span class="contact-arrow">›</span>
+    </a>
+
+    <a class="contact-button" href="#" id="zalo">
+        <span class="contact-icon">Z</span>
+        <span>Zalo</span>
+        <span class="contact-arrow">›</span>
+    </a>
+
+    <a class="contact-button" href="#" id="whatsapp">
+        <span class="contact-icon">◉</span>
+        <span>WhatsApp</span>
+        <span class="contact-arrow">›</span>
+    </a>
+
+    <a class="contact-button" href="#" id="phone">
+        <span class="contact-icon">☎</span>
+        <span>Call</span>
+        <span class="contact-arrow">›</span>
+    </a>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        ⚡ AXEL ELECTRO
+    </div>
+
+    <div class="footer-text">
+        Independent Electrical Technician · Nha Trang, Vietnam
+    </div>
+
+</footer>
+
+
+<script>
+
+let language = "en";
+
+function toggleLanguage() {
+
+    if (language === "en") {
+
+        language = "ru";
+
+        document.documentElement.lang = "ru";
+
+        document.getElementById("description").textContent =
+            "Профессиональные электротехнические услуги в Нячанге.";
+
+        document.getElementById("services-title").textContent =
+            "Услуги";
+
+        document.getElementById("contact-title").textContent =
+            "Контакты";
+
+    } else {
+
+        language = "en";
+
+        document.documentElement.lang = "en";
+
+        document.getElementById("description").textContent =
+            "Professional electrical and technical services in Nha Trang.";
+
+        document.getElementById("services-title").textContent =
+            "What I Do";
+
+        document.getElementById("contact-title").textContent =
+            "Contact";
+    }
+}
+
+</script>
+
+</body>
+</html>
