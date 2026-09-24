@@ -179,13 +179,8 @@ footer{padding:28px 0;background:var(--yellow);color:#050505}
 .footer span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
 
 /* RU */
-.ru{display:none}
+body:not(.ru) .ru{display:none}
 body.ru .en{display:none}
-body.ru .ru{display:block}
-body.ru .service p.ru{display:block}
-body.ru .service p.en{display:none}
-body.ru .contact small.ru{display:block}
-body.ru .contact small.en{display:none}
 
 @media(max-width:650px){
   .hero{min-height:72vh}
